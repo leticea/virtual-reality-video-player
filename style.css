@@ -15,6 +15,29 @@ body {
   height: 100vh;
 }
 
+#app {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content max-content max-content;
+  grid-template-areas: 'aside header' 'aside main' 'aside footer';
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
 .side-menu {
   display: flex;
   padding: 0.75rem;
