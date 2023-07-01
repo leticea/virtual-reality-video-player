@@ -13,6 +13,7 @@ body {
   display: grid;
   place-content: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 #app {
@@ -106,7 +107,8 @@ footer {
   border-radius: 80px;
 }
 
-.actions ion-icon:hover, .actions i.ai-panel-left:hover {
+.actions ion-icon:hover,
+.actions i.ai-panel-left:hover {
   background: rgba(255, 255, 255, 0.2);
   opacity: 1;
 }
@@ -177,6 +179,13 @@ iframe {
   border-radius: inherit;
 }
 
+.interaction {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-self: center;
+}
+
 .interaction .elipse {
   backdrop-filter: blur(2px);
   background: rgba(255, 255, 255, 0.6);
@@ -191,4 +200,15 @@ iframe {
   border-radius: 8px;
   height: 0.5rem;
   width: 5.375rem;
+}
+
+#app {
+  animation: appear 400ms 500ms backwards;
+}
+
+@keyframes appear {
+  from {
+    scale: 2;
+    opacity: 0;
+  }
 }
