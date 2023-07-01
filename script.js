@@ -29,6 +29,17 @@ window.onYouTubeIframeAPIReady = function () {
   });
 };
 
-function videoStateChange(event) {}
+function videoStateChange(event) {
+  switch (event.data) {
+    case YT.PlayerState.PLAYING:
+      ambientLight.seekTo(event.target.getCurrentTime());
+      ambientLight.playVideo();
+      break;
+    case YT.PlayerState.PAUSE:
+      ambientLight.seekTo(event.target.getCurrentTime());
+      ambientLight.pauseVideo();
+      break;
+  }
+}
 function ambientLightReady(event) {}
 function ambientStateChange(event) {}
