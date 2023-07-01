@@ -15,7 +15,7 @@
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Esse projeto foi desenvolvido com API do Youtube e com as seguintes tecnologias:
 
 - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
@@ -154,6 +154,12 @@ Projetos #boraCodar da [Rocketseat](https://boracodar.dev/).
       <td>Multi-Step Form</td>
       <td>14/06/23</td>
       <td><a href="https://github.com/leticea/multi-step-form">🔗</a></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Lighting Adjustment</td>
+      <td>21/06/23</td>
+      <td><a href="https://github.com/leticea/lighting-adjustment">🔗</a></td>
     </tr>
   </tbody>
 </table>
