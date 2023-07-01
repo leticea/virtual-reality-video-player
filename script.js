@@ -44,5 +44,17 @@ function videoStateChange(event) {
       break;
   }
 }
-function ambientLightReady(event) {}
+
+function ambientLightReady(event) {
+  event.target.mute();
+}
+
 function ambientStateChange(event) {}
+
+const app = document.querySelector("#app");
+app.addEventListener("animationend", (e) => {
+  if (e.animationName !== "appear") return;
+
+  animationHasEnded = true;
+  createAmbientLight();
+});
