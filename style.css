@@ -19,7 +19,7 @@ body {
   display: grid;
   grid-template-columns: max-content max-content;
   grid-template-rows: max-content max-content max-content;
-  grid-template-areas: 'aside header' 'aside main' 'aside footer';
+  grid-template-areas: "aside header" "aside main" "aside footer";
 }
 
 header {
@@ -89,7 +89,7 @@ footer {
   gap: 1rem;
 }
 
-.actions ion-icons {
+.actions ion-icon {
   width: 1.5rem;
   height: 1.5rem;
   color: #ffffff;
@@ -98,6 +98,24 @@ footer {
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
+  border-radius: 80px;
+}
+
+.actions ion-icon:hover, .actions i.ai-panel-left:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+.actions i.ai-panel-left {
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0.8;
+  border-radius: 80px;
 }
 
 .address-bar {
