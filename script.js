@@ -37,7 +37,7 @@ function videoStateChange(event) {
       ambientLight.playVideo();
       break;
 
-    case YT.PlayerState.PAUSE:
+    case YT.PlayerState.PAUSED:
       if (!ambientLight) return;
       ambientLight.seekTo(event.target.getCurrentTime());
       ambientLight.pauseVideo();
@@ -45,11 +45,31 @@ function videoStateChange(event) {
   }
 }
 
-function ambientLightReady(event) {
+function betterAmbientLight(event) {
   event.target.mute();
+
+  const qualityLevels = event.target.getAvailableQualityLevels();
+  if (qualityLevels && qualityLevels.length && qualityLevels.length > 0) {
+    qualityLevels.reverse();
+    const lowestLevel =
+      qualityLevels[qualityLevels.findIndex((q) => q !== "auto")];
+
+    event.target.setPlaybackQuality(lowestLevel);
+  }
 }
 
-function ambientStateChange(event) {}
+function ambientLightReady(event) {
+  betterAmbientLight(event);
+}
+
+function ambientStateChange(event) {
+  switch (event.data) {
+    case YT.PlayerState.BUFFERING:
+    case YT.PlayerState.PLAYING:
+      betterAmbientLight(event);
+      break;
+  }
+}
 
 const app = document.querySelector("#app");
 app.addEventListener("animationend", (e) => {
