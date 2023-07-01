@@ -150,6 +150,18 @@ footer {
   opacity: 0.8;
 }
 
+.url {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.url ion-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -2px;
+}
+
 .screen {
   width: 60rem;
   height: 33.75rem;
