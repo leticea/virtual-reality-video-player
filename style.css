@@ -16,7 +16,7 @@
   display: flex;
   padding: 0.5rem;
   align-items: flex-start;
-  border-radius: 80px;
+  border-radius: 8rem;
   width: 1.5rem;
   height: 1.5rem;
   color: #ffffff;
@@ -26,4 +26,36 @@
 .side-menu ion-icon:hover {
   background: rgba(255, 255, 255, 0.2);
   opacity: 1;
+}
+
+.nav-bar {
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  border-radius: 5rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.05),
+    0px 1px 1px 0px rgba(255, 255, 255, 0.3) inset,
+    0px -1px 1px 0px rgba(255, 255, 255, 0.1) inset;
+  backdrop-filter: blur(16px);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actions ion-icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
+  opacity: 0.8;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
